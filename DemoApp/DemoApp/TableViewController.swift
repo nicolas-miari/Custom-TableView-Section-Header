@@ -32,7 +32,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "\(indexPath.row)"
+        cell.textLabel?.text = "Section:\(indexPath.section) - Row:\(indexPath.row)"
 
         return cell
     }
