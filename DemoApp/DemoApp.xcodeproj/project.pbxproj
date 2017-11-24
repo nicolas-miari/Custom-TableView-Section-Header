@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FABCB1B31F56C19300DE1E02 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCB1B21F56C19300DE1E02 /* MyView.swift */; };
 		FAD98DA11F5021BE008AE31A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD98DA01F5021BE008AE31A /* AppDelegate.swift */; };
 		FAD98DA61F5021BE008AE31A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD98DA41F5021BE008AE31A /* Main.storyboard */; };
 		FAD98DA81F5021BE008AE31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD98DA71F5021BE008AE31A /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FABCB1B21F56C19300DE1E02 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		FAD98D9D1F5021BE008AE31A /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD98DA01F5021BE008AE31A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD98DA51F5021BE008AE31A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				FAD98DA01F5021BE008AE31A /* AppDelegate.swift */,
 				FAD98DB21F5021D1008AE31A /* TableViewController.swift */,
+				FABCB1B21F56C19300DE1E02 /* MyView.swift */,
 				FAD98DA41F5021BE008AE31A /* Main.storyboard */,
 				FAD98DA71F5021BE008AE31A /* Assets.xcassets */,
 				FAD98DA91F5021BE008AE31A /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABCB1B31F56C19300DE1E02 /* MyView.swift in Sources */,
 				FAD98DB31F5021D1008AE31A /* TableViewController.swift in Sources */,
 				FAD98DA11F5021BE008AE31A /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +308,7 @@
 				FAD98DB11F5021BE008AE31A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
