@@ -5,7 +5,7 @@ leverage the table view delegate and data source methods to simulate flowating
 section headers with an alternative layout.
 
 
-###Background
+### Background
 
 The built-in section header functionality for non-grouped tables places the 
 section header views vertically, between the last row of a section and the first 
