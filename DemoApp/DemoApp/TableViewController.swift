@@ -48,19 +48,26 @@ class TableViewController: UITableViewController {
 
             // Top to first row (scroll with row), left to table:
             let topConstriant =  header.topAnchor.constraint(equalTo: tableView.topAnchor, constant: cellFrame.origin.y)
-            topConstriant.priority = 10
+            topConstriant.priority = UILayoutPriority(rawValue: 10)
             topConstriant.isActive = true
 
             header.leftAnchor.constraint(equalTo: tableView.leftAnchor).isActive = true
 
-            // Top to superview (float at top until oushed out)
+            // Top to superview (float at top until pushed out)
             guard let superview = self.view.superview else {
                 return
             }
-            let constant = self.tableView.contentInset.top
-            let topConstraint2 = header.topAnchor.constraint(greaterThanOrEqualTo: superview.topAnchor, constant: constant)
-            topConstraint2.priority = 100
-            topConstraint2.isActive = true
+
+            if #available(iOS 11.0, *) {
+                let topConstraint2 = header.topAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.topAnchor, constant: 0)
+                topConstraint2.priority = UILayoutPriority(rawValue: 100)
+                topConstraint2.isActive = true
+            } else {
+                let constant = tableView.contentInset.top
+                let topConstraint2 = header.topAnchor.constraint(greaterThanOrEqualTo: superview.topAnchor, constant: constant)
+                topConstraint2.priority = UILayoutPriority(rawValue: 100)
+                topConstraint2.isActive = true
+            }
         }
 
         let rowCount = self.tableView(tableView, numberOfRowsInSection: indexPath.section)
@@ -72,7 +79,7 @@ class TableViewController: UITableViewController {
 
             // Bottom to last row of section (scroll out of screen with last row):
             let bottomConstraint = header.bottomAnchor.constraint(lessThanOrEqualTo: tableView.topAnchor, constant: yCoordinate)
-            bottomConstraint.priority = 1000
+            bottomConstraint.priority = UILayoutPriority(rawValue: 1000)
             bottomConstraint.isActive = true
         }
     }
