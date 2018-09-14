@@ -4,7 +4,7 @@
 leverage the table view delegate and data source methods to simulate flowating 
 section headers with an alternative layout.
 
-![Example](/Images/Capture.gif){: .center-image }
+<center>![Example](/Images/Capture.gif)</center>
 
 ### Background
 
